@@ -1,0 +1,441 @@
+:root{
+    --darkorange:#DA722C;
+    --blue:#057ADA;
+    --brightwhite:#E8F7FB;
+    --darkblue:#023047;
+    --black:#070917;
+    --brightpurple:#6F7DFB;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+.wrapper{
+    max-width: 1134px;
+    margin: 0 auto;
+}
+.wrapper-slide{
+    margin: 0 auto;
+}
+.btn{
+    padding: 16px 32px;
+    border-radius: 24px;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+}
+.btn.dark{
+    background: var(--darkblue);
+}
+.btn.dark:hover{
+    background: #1f6689;
+}
+.btn.light{
+    background: var(--darkorange);
+}
+.btn.light:hover{
+    background: #ff6600;
+}
+.btn.enrol::before{
+    content: url("images/PencilAlt.svg");
+    position: absolute;
+    top: 50%;
+    left:32px;
+    transform: translateY(-50%);
+}
+.btn.enrol{
+    padding-left: 60px;
+}
+/* header */
+header{
+    background: linear-gradient(180deg, #6FFB7D 0%, #26308C 100%);
+    height: 100vh;
+    width: 100%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: fixed;
+    width: 100%;
+    top: 36px;
+    z-index: 100;
+    margin-top: -40px;
+    transition: all .5s ease;
+}
+nav.scrolled{
+    background: white;
+    box-shadow: 0px 5px #acacac;
+}
+nav .logo img{
+    margin-top: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap:60px;
+    list-style: none;
+    margin: 0;
+}
+nav ul li a{
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 16px;
+    color: #757575;
+    text-decoration: none;
+}
+nav ul li.title a:hover{
+    color: var(--darkorange);
+}
+.mobile-menu-container{
+    display: none;
+}
+/* slide section */
+.hero-section{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
+}
+.hero-section .left h1{
+    font-family: "Raleway",sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 125%;
+    color: #ffff;
+    margin-bottom: 0;
+}
+.hero-section .left p{
+    font-family: "Poppins",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 200%;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.hero-section .left{
+    width: 457px;
+}
+.hero-section .right{
+    align-self: flex-end;
+}
+.hero-section .right img{
+    height: 520px;
+    vertical-align: middle;
+}
+/* testimonial section */
+section{
+    margin-top: 100px;
+}
+h2{
+    font-family: "Raleway",sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 120%;
+    margin: 0;
+    color: var(--darkblue);
+}
+h2.light{
+    color: #fff;
+}
+section p{
+    font-family: "Poppins",sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 200%;
+    color: var(--darkblue);
+    margin: 12px 0px;
+}
+.testimonials-section{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+.testimonials-section .mobile-btn{
+    display: none;
+}
+.testimonials-section .testimonial-card{
+    width: 442px;
+    background: #fff;
+    box-shadow: 0px 9px 36px rgba(0,0,0,0.2);
+    border-radius: 24px;
+    margin-bottom: 50px;
+    position: relative;
+}
+.testimonials-section .testimonial-card::before{
+    content: "";
+    background: var(--darkorange);
+    width: 28px;
+    position: absolute;
+    height: 40px;
+    top: -40px;
+    left: 60px;
+    border-radius: 24px 24px 0 0;
+}
+.testimonials-section .testimonial-card:last-child::before{
+    top: -50px;
+    border-radius: 0 0 24px 24px;
+    height: calc(100% + 90px);
+    z-index: -1;
+}
+.testimonials-section .testimonial-card .content{
+    font-family: "Raleway",sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 150%;
+    color: #fff;
+    border-radius: 24px;
+    padding: 24px 32px;
+    background: var(--brightpurple);
+}
+.testimonials-section .testimonial-card img{
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 32px;
+    bottom: 20px;
+
+}
+.testimonials-section .testimonial-card .info h4{
+    font-family: "Raleway",sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 120%;
+    color: var(--darkblue);
+    margin: 0;
+}
+.testimonials-section .testimonial-card .info{
+    padding: 24px 32px;
+    background: #fff;
+    border-radius: 24px;
+}
+.testimonials-section .testimonial-card .info p.company{
+    font-family: "Raleway",sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
+    color: var(--darkblue);
+}
+/* courses section */
+.course-section{
+    background: linear-gradient(180deg,#6f7dfb 0%,#26308c 100%);
+    padding: 70px 0;
+    padding-bottom: 100px;
+}
+.course-section h2{
+    text-align: center;
+}
+.course-section .course-cards{
+    display: flex;
+    gap: 73px;
+}
+.course-section .course-cards img{
+    width: 100%;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.25));
+    border-radius: 24px;
+}
+.course-section .course-card{
+    background: #fff;
+    border-radius: 24px;
+    padding: 0px 32px;
+    margin: 40px 0;
+    position: relative;
+    padding-bottom: 20px;
+}
+.course-section .course-card::after{
+    content: "";
+    height: 8px;
+    left: 32px;
+    right: 32px;
+    bottom: 0;
+    background: var(--darkblue);
+    border-radius: 24px;
+    position: absolute;
+    margin-top: 10px;
+}
+.course-section .course-card h3{
+    font-family: "Raleway",sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--darkblue);
+    margin: 0;
+}
+.course-section .course-card .info{
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+.course-section .course-card .duration{
+    font-family: "Raleway",sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 150%;
+    white-space: nowrap;
+    color: var(--darkblue);
+    position: relative;
+    padding-left: 20px;
+}
+.course-section .course-card .duration::before{
+    content: url('images/Clock.png');
+    position: absolute;
+    top: 2px;
+    left: -6px;
+}
+.course-section .wrapper{
+    position: relative;
+}
+.course-section .wrapper .btn{
+    position: absolute;
+    right: 0;
+}
+/* footer section */
+footer{
+    background: var(--black);
+    color: white;
+    margin-top: 100px;
+    padding: 70px 0;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer h3{
+    color: var(--darkorange);
+}
+footer ul{
+    list-style: none;
+    padding-left: 20px;
+}
+footer ul li{
+    margin: 16px 0;
+}
+footer .links-container{
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr;
+}
+footer .social{
+    margin-left: 20px;
+}
+footer .social a{
+    margin: 28px;
+}
+footer form{
+    margin-left: 20px;
+    margin-top: 16px;
+    position: relative;
+}
+footer form input{
+    font-family: "Poppins",sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 200%;
+    border-radius: 8px;
+    padding: 8px 32px;
+    border: none;
+    width: 70%;
+    color: #000;
+}
+footer form .submit-btn{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 8px;
+    background: var(--darkblue);
+    padding: 8px 32px;
+    border: 0;
+    line-height: 200%;
+    font-family: "Poppins",sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+footer form .submit-btn:hover{
+    background: var(--darkorange);
+}
+footer .copyright{
+    margin-top: 36px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsiveness */
+@media (max-width: 1100px){
+    .btn{
+        padding: 12px 32px;
+    }
+    .wrapper{
+        padding: 0 100px;
+    }
+    nav{
+        width: 100%;
+        left: 0;
+        right: 0;
+        padding: 36px 100px;
+    }
+    nav.scrolled{
+        padding: 16px 100px;
+    }
+    header,
+    .hero-section,
+    header .wrapper{
+        max-height: 1100px;
+    }
+    .hero-section{
+        flex-direction: column;
+    }
+    .hero-section .left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    .hero-section .left .btn{
+        align-self: flex-start;
+    }
+    .hero-section .right{
+        display: absolute;
+        bottom: 0;
+        margin-top: -100px;
+    }
+    .hero-section .right img{
+        height: 580px;
+    }
+}
